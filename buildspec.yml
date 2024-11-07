@@ -7,16 +7,24 @@ phases:
     commands:
       - echo Installing dependencies...
       - npm install  # Installs dependencies based on package.json
+
+  pre_build:
+    commands:
+      - echo Running tests...
+      - npm test  # Runs the Jest tests defined in your test scripts
+
   build:
     commands:
       - echo Build started on `date`
       # If using a build process (e.g., npm run build), include it here
+      # For example, if you have a build command:
       # - npm run build
+
   post_build:
     commands:
       - echo Build completed on `date`
 
 artifacts:
   files:
-    - '**/*'
-  base-directory: .  # Ensure this points to the directory where your server files are located
+    - '**/*'  # Include all files for deployment
+  base-directory: .  # Adjust this to the directory containing your deployment files
