@@ -18,8 +18,10 @@ describe('Simple Webpage Tests', () => {
   test('Page loads successfully', async () => {
     await page.goto('http://35.91.43.9/');  // Use EC2 public IP
     const title = await page.title();
-    expect(title).toBe('Expected Page Title');  // Replace with actual title on your page
+    expect(title).toBe('Emily Yao - Resume');  // Update with actual title
   }, 30000);
+
+
 
   test('Check for key element', async () => {
     await page.goto('http://35.91.43.9/');  // Use EC2 public IP
