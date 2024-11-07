@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 14  # Specify the Node.js version (adjust as needed)
+      nodejs: 18  # Specify Node.js version 18 to support modern syntax
     commands:
       - echo Installing dependencies...
       - npm install  # Installs dependencies based on package.json
@@ -17,8 +17,6 @@ phases:
     commands:
       - echo Build started on `date`
       # If using a build process (e.g., npm run build), include it here
-      # For example, if you have a build command:
-      # - npm run build
 
   post_build:
     commands:
