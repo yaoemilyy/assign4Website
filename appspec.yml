@@ -1,14 +1,12 @@
 version: 0.0
 os: linux
+
 files:
   - source: /
     destination: /home/ec2-user/your-app-folder  
 
-hooks:
-  AfterInstall:
-    - location: scripts/install_dependencies.sh
-      timeout: 300
-      runas: ec2-user
-    - location: scripts/start_server.sh
-      timeout: 300
-      runas: ec2-user
+permissions:
+  - object: /home/ec2-user/your-app-folder
+    pattern: "**"
+    owner: ec2-user
+    group: ec2-user
