@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14  # Specify the Node.js version you need
+    commands:
+      - echo Installing dependencies...
+      - npm install  # If your project has dependencies (e.g., using package.json)
+  build:
+    commands:
+      - echo Build started on `date`
+      - npm run build  # Command to build your project (e.g., for React or other frameworks)
+  post_build:
+    commands:
+      - echo Build completed on `date`
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: build  # Replace with the directory of your build output
