@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 42px; /* Increased for more emphasis */
+    color: #2d572c;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+header p {
+    color: #555;
+    font-size: 15px;
+}
+
+header a {
+    color: #2d572c;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+section h2 {
+    font-size: 28px; /* Increased for more emphasis */
+    color: #2d572c;
+    border-bottom: 2px solid #2d572c;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.education-item, .project-item, .experience-item {
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 22px; /* Increased for more emphasis */
+    color: #333;
+    font-weight: bold;
+}
+
+h3 span {
+    font-weight: normal;
+    font-size: 15px;
+    color: #777;
+    margin-left: 10px;
+}
+
+p, li {
+    font-size: 17px; /* Slightly larger for readability */
+    line-height: 1.6;
+    color: #444;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.education-item p, .project-item ul, .experience-item ul {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #2d572c;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.project-item ul, .experience-item ul {
+    padding-left: 15px;
+    color: #333;
+}
