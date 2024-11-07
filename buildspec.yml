@@ -3,10 +3,12 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 18  # Specify Node.js version 18 to support modern syntax
+      nodejs: 18  # Specify Node.js version 18 to support Puppeteer and modern syntax
     commands:
       - echo Installing dependencies...
       - npm install  # Installs dependencies based on package.json
+      - echo Installing libraries needed for Puppeteer...
+      - yum install -y libgbm libXcomposite libXcursor libXdamage libXi libXtst cups-libs dbus-glib libXrandr libXrandr libxshmfence mesa-libgbm alsa-lib atk at-spi2-atk gtk3
 
   pre_build:
     commands:
