@@ -16,7 +16,7 @@ describe('Simple Webpage Tests', () => {
   });
 
   test('Page loads successfully', async () => {
-    await page.goto('http://35.91.43.9/');  // Use EC2 public IP
+    await page.goto('http://34.216.169.218/');  // Use EC2 public IP
     const title = await page.title();
     expect(title).toBe('Emily Yao - Resume');  // Update with actual title
   }, 30000);
@@ -24,7 +24,7 @@ describe('Simple Webpage Tests', () => {
 
 
   test('Check for key element', async () => {
-    await page.goto('http://35.91.43.9/');  // Use EC2 public IP
+    await page.goto('http://34.216.169.218/');  // Use EC2 public IP
     const element = await page.$('h1');   // Replace with a selector for an important element
     expect(element).not.toBeNull();
   }, 30000);
