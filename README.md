@@ -18,13 +18,28 @@ The pipeline follows a CI/CD approach with the following stages:
 ### Pipeline Configuration Steps
 1. **Source Stage**:
    - Connect to GitHub and enable the webhook.
+   - Navigate to AWS CodePipeline and create a new pipeline.
+   - Select your GitHub repository as the source.
+   - Configure the pipeline to monitor the repository for changes.
 
 2. **Build Stage**:
    - Create a CodeBuild project with Node.js as runtime.
-   - Use the provided `buildspec.yml` configuration.
+   - create `buildspec.yml` configuration.
 
 3. **Deploy Stage**:
-   - Configure CodeDeploy to target your EC2 instance.
+   - Create a CodeDeploy application and deployment group.
+   - Configure your EC2 instance with the CodeDeploy agent.
+   - Use an appspec.yml file to specify the deployment steps
+4. **Build Stage**:
+   - Create a test file in your project directory, e.g., tests/pageLoad.test.js.
+   - Add a Test stage in your CodePipeline.
+   - Use the existing CodeBuild project to run the tests by specifying the npm test command in the buildspec.yml.
+
+
+### Maintaining the Pipeline
+- Edit buildspec.yml for testing or build changes.
+- Modify the appspec.yml for deployment changes.
+- Push updates to GitHub and the pipeline will automatically trigger.
 
 
 # Troubleshooting Guide
